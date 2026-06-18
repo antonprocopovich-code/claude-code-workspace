@@ -40,8 +40,12 @@
 | Проект | Папка | Описание |
 |--------|-------|----------|
 | **Контент Завод** | [`projects/content-zavod/`](projects/content-zavod/) | Агентная система для создания контента |
+| **Excel Tool** | [`projects/excel-tool/`](projects/excel-tool/) | CLI для работы с .xlsx файлами, минимум токенов |
+| **Персональный коуч** | [`projects/personal-coach/`](projects/personal-coach/) | Личный коуч-наставник — загружается только по запросу через скилл `/ii-couch-anton` |
 
 > Инструкции оркестратора, пайплайн, архитектура агентов и правила памяти — в [`projects/content-zavod/CLAUDE.md`](projects/content-zavod/CLAUDE.md).
+>
+> Коуч НЕ загружается автоматически. Только по явному запросу через скилл.
 
 ---
 
@@ -58,6 +62,9 @@ Claude Code/
 ├── skills-lock.json             # скилы Claude Code
 │
 └── projects/                    # проекты
-    └── content-zavod/           # Контент Завод — агентная система
-        └── CLAUDE.md            # инструкции оркестратора и пайплайн
+    ├── content-zavod/           # Контент Завод — агентная система
+    │   └── CLAUDE.md            # инструкции оркестратора и пайплайн
+    └── excel-tool/              # Excel CLI — работа с .xlsx файлами
+        ├── CLAUDE.md            # инструкции и правила
+        └── excel_cli.py         # CLI скрипт (openpyxl)
 ```
