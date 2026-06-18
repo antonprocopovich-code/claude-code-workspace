@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Брендбук — Антон v3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:            #FAFAF9;
+    --bg-off:        #F5F3F0;
+    --bg-dark:       #1C1917;
+    --bg-dark-2:     #44403C;
+    --text:          #0C0A09;
+    --text-muted:    #78716C;
+    --accent:        #CA8A04;
+    --accent-hover:  #B45309;
+    --accent-light:  rgba(202,138,4,0.10);
+    --divider:       #E7E5E2;
+    --font-sans:     'Inter', system-ui, sans-serif;
+    --font-serif:    'Cormorant Garamond', Georgia, serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── LAYOUT ──────────────────────── */
+  .page { max-width: 960px; margin: 0 auto; padding: 0 40px 100px; }
+
+  section { padding-top: 72px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  /* ── HERO ────────────────────────── */
+  .hero {
+    background: var(--bg-dark);
+    margin: 0 -40px;
+    padding: 80px 40px 72px;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: var(--font-sans);
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #FAFAF9;
+    margin-bottom: 32px;
+  }
+
+  .hero h1 span {
+    color: var(--accent);
+  }
+
+  .hero-meta {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: #78716C;
+    text-transform: uppercase;
+  }
+
+  /* ── PALETTE ─────────────────────── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .swatch { background: #fff; border: 1px solid var(--divider); }
+
+  .swatch-color { height: 100px; width: 100%; }
+
+  .swatch-info { padding: 16px 18px; }
+
+  .swatch-role {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  .swatch-hex {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .swatch-name {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* contrast table */
+  .c-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 32px; }
+  .c-table th, .c-table td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--divider); }
+  .c-table th { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+  .badge { display:inline-block; padding:3px 9px; font-size:10px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:2px; }
+  .badge-aaa { background:rgba(202,138,4,0.15); color:#92610A; }
+  .badge-aa  { background:rgba(12,10,9,0.07);  color:var(--text); }
+  .cp { display:inline-block; padding:3px 10px; border-radius:2px; font-size:13px; font-weight:600; }
+
+  /* ── TYPOGRAPHY ──────────────────── */
+  .font-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .font-card {
+    background: var(--bg-off);
+    padding: 36px;
+  }
+
+  .font-card-meta {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .font-card-name {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .demo-sans {
+    font-family: var(--font-sans);
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .demo-serif {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  /* Type scale */
+  .type-row { padding: 28px 0; border-bottom: 1px solid var(--divider); }
+  .type-row:last-child { border-bottom: none; }
+  .type-meta-small { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+  .t-h1 { font-family: var(--font-sans); font-size: 72px; font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase; color: var(--text); }
+  .t-h2 { font-family: var(--font-sans); font-size: 42px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase; color: var(--text); }
+  .t-h3 { font-family: var(--font-sans); font-size: 24px; font-weight: 700; line-height: 1.2; color: var(--text); }
+  .t-quote { font-family: var(--font-serif); font-size: 28px; font-style: italic; font-weight: 400; line-height: 1.45; color: var(--text); }
+  .t-body { font-family: var(--font-sans); font-size: 17px; font-weight: 400; line-height: 1.65; color: var(--text); max-width: 580px; }
+  .t-caption { font-family: var(--font-sans); font-size: 12px; font-weight: 500; letter-spacing: 0.06em; color: var(--text-muted); text-transform: uppercase; }
+
+  /* type table */
+  .t-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 40px; }
+  .t-table th, .t-table td { padding: 12px 16px; border-bottom: 1px solid var(--divider); text-align: left; }
+  .t-table th { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+  .t-table td:first-child { font-weight: 800; color: var(--accent); }
+
+  /* ── COMPONENTS ──────────────────── */
+  .comp-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 36px; }
+  .comp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+
+  .btn-cta {
+    display: inline-block;
+    background: var(--text);
+    color: #FAFAF9;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border-radius: 0;
+    border: 2px solid var(--text);
+    cursor: pointer;
+    min-height: 50px;
+    text-decoration: none;
+    transition: background 180ms ease, color 180ms ease;
+  }
+  .btn-cta:hover { background: var(--accent); border-color: var(--accent); color: var(--text); }
+
+  .btn-gold {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    border-radius: 0;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    min-height: 50px;
+    text-decoration: none;
+    transition: background 180ms ease, box-shadow 180ms ease;
+  }
+  .btn-gold:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    border-radius: 0;
+    border: 2px solid var(--text);
+    cursor: pointer;
+    min-height: 50px;
+    text-decoration: none;
+    transition: background 180ms ease, color 180ms ease;
+  }
+  .btn-outline:hover { background: var(--text); color: #FAFAF9; }
+
+  /* Dividers */
+  hr { border: none; border-top: 1px solid var(--divider); margin: 36px 0; }
+  .hr-gold { border: none; border-top: 2px solid var(--accent); margin: 36px 0; width: 48px; }
+
+  /* Quote */
+  .quote-block {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 28px;
+    margin: 36px 0;
+  }
+  .quote-block q {
+    font-family: var(--font-serif);
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--text);
+    quotes: none;
+    display: block;
+    margin-bottom: 14px;
+  }
+  .quote-block cite {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-style: normal;
+  }
+
+  /* Cards */
+  .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+  .card {
+    background: var(--bg-off);
+    padding: 32px;
+    border-top: 3px solid var(--divider);
+  }
+  .card--accent { border-top-color: var(--accent); }
+  .card--dark { background: var(--bg-dark); border-top-color: var(--accent); }
+
+  .card-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .card h3 {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .card--dark h3 { color: #FAFAF9; }
+
+  .card p { font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+  .card--dark p { color: #78716C; }
+
+  /* ── MOCKUPS ─────────────────────── */
+  .mockups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .mockup { border: 1px solid var(--divider); overflow: hidden; }
+
+  .mockup-img {
+    height: 220px;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    position: relative;
+  }
+
+  .mockup-img--white {
+    background: #FAFAF9;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mockup-img--dark {
+    background: var(--bg-dark);
+  }
+
+  .mockup-big-text {
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .mockup-gold-line {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+  }
+
+  .mockup-dark-text {
+    font-family: var(--font-serif);
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.4;
+    color: #FAFAF9;
+    position: relative;
+    z-index: 1;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+
+  .mockup-body { padding: 20px 24px; border-top: 1px solid var(--divider); }
+  .mockup-platform { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .mockup-text { font-size: 14px; line-height: 1.55; color: var(--text-muted); }
+
+  /* ── ARCHETYPE ───────────────────── */
+  .arch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+  .arch-card { padding: 36px 28px; background: var(--bg-off); border-top: 3px solid var(--divider); }
+  .arch-card--main { border-top-color: var(--accent); background: var(--text); }
+
+  .arch-num {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .arch-card--main .arch-num { color: var(--accent); }
+
+  .arch-name {
+    font-family: var(--font-sans);
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+  .arch-card--main .arch-name { color: #FAFAF9; }
+
+  .arch-desc { font-size: 13px; line-height: 1.6; color: var(--text-muted); }
+  .arch-card--main .arch-desc { color: #78716C; }
+
+  /* ── VOICE SAMPLES ───────────────── */
+  .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+  .voice-card {
+    padding: 28px;
+    background: var(--bg-off);
+    border-top: 1px solid var(--divider);
+  }
+
+  .voice-bad {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .voice-good {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .voice-accent { color: var(--accent); }
+
+  /* ── RULES BOX ───────────────────── */
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+
+  .rule-row {
+    padding: 20px 24px;
+    background: var(--bg-off);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .rule-bullet {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 900;
+    color: var(--text);
+    margin-top: 1px;
+  }
+
+  .rule-text { font-size: 14px; line-height: 1.5; color: var(--text); }
+  .rule-text strong { font-weight: 700; display: block; margin-bottom: 2px; }
+  .rule-text span { color: var(--text-muted); font-size: 13px; }
+
+  /* ── CSS BOX ─────────────────────── */
+  .code-box {
+    background: var(--bg-dark);
+    padding: 32px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-x: auto;
+    color: #A8A29E;
+  }
+  .code-comment { color: #44403C; }
+  .code-var     { color: var(--accent); }
+  .code-val     { color: #F2EDE6; }
+
+  /* ── FOOTER ──────────────────────── */
+  .footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 3px solid var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .footer-brand {
+    font-family: var(--font-sans);
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--text);
+  }
+  .footer-brand span { color: var(--accent); }
+  .footer-meta { font-size: 12px; color: var(--text-muted); text-align: right; line-height: 1.7; font-weight: 500; }
+
+  /* ── RESPONSIVE ──────────────────── */
+  @media (max-width: 680px) {
+    .page { padding: 0 20px 80px; }
+    .hero { margin: 0 -20px; padding: 60px 20px 56px; }
+    .palette-grid { grid-template-columns: 1fr 1fr; }
+    .font-pair, .cards-grid, .mockups, .arch-grid, .voice-grid, .rules-grid { grid-template-columns: 1fr; }
+    .t-h1 { font-size: 48px; }
+    .t-h2 { font-size: 32px; }
+    .footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .footer-meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">Личный бренд · Визуальная система · v3</div>
+  <h1>АНТОН<br><span>БРЕНД</span>БУК</h1>
+  <div class="hero-meta">2026-06-16 &nbsp;·&nbsp; White Base / Black Type / Gold Accent</div>
+</div>
+
+<div class="page">
+
+  <!-- 01 АРХЕТИП -->
+  <section>
+    <div class="section-label">01 — Архетип бренда</div>
+    <div class="arch-grid">
+      <div class="arch-card arch-card--main">
+        <div class="arch-num">Основной</div>
+        <div class="arch-name">МАГ</div>
+        <div class="arch-desc">Трансформирует реальность через глубокое знание. Не объясняет — показывает. Работает с тьмой. Его слова меняют внутреннее состояние.</div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-num">Вспомогательный</div>
+        <div class="arch-name">МУДРЕЦ</div>
+        <div class="arch-desc">Системный взгляд, понимание причин, знание из опыта, а не из книг. Говорит из прожитого.</div>
+      </div>
+      <div class="arch-card">
+        <div class="arch-num">Вспомогательный</div>
+        <div class="arch-name">ПРАВИТЕЛЬ</div>
+        <div class="arch-desc">Строит, а не рассуждает. Задаёт стандарт. Уверенность из знания — не агрессия.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 ЦВЕТОВАЯ ПАЛИТРА -->
+  <section>
+    <div class="section-label">02 — Цветовая палитра</div>
+
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FAFAF9; border-bottom:1px solid #E7E5E2;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Background · Primary</div>
+          <div class="swatch-hex">#FAFAF9</div>
+          <div class="swatch-name">Тёплый белый — основа</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0C0A09;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Text · Primary</div>
+          <div class="swatch-hex">#0C0A09</div>
+          <div class="swatch-name">Почти-чёрный — Правитель</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#CA8A04;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Accent · Gold</div>
+          <div class="swatch-hex">#CA8A04</div>
+          <div class="swatch-name">Золото — знание, свеча, акцент</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1C1917;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Dark · Hero / Инверсия</div>
+          <div class="swatch-hex">#1C1917</div>
+          <div class="swatch-name">Угольный — блоки-перебивки</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F5F3F0; border-bottom:1px solid #E7E5E2;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Background · Off</div>
+          <div class="swatch-hex">#F5F3F0</div>
+          <div class="swatch-name">Карточки, второй слой</div>
+        </div>
+      </div>
+
+      <div class="swatch">
+        <div class="swatch-color" style="background:#78716C;"></div>
+        <div class="swatch-info">
+          <div class="swatch-role">Text · Muted</div>
+          <div class="swatch-hex">#78716C</div>
+          <div class="swatch-name">Подписи, метаданные</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr-gold"></div>
+    <div class="section-label" style="margin-bottom:0;">Таблица контрастов (WCAG)</div>
+    <table class="c-table">
+      <thead>
+        <tr>
+          <th>Текст</th>
+          <th>Фон</th>
+          <th>Соотношение</th>
+          <th>Статус</th>
+          <th>Пример</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#0C0A09</td>
+          <td>#FAFAF9</td>
+          <td>~19.5:1</td>
+          <td><span class="badge badge-aaa">AAA</span></td>
+          <td><span class="cp" style="background:#FAFAF9; color:#0C0A09; border:1px solid #E7E5E2;">Основной текст</span></td>
+        </tr>
+        <tr>
+          <td>#0C0A09</td>
+          <td>#CA8A04</td>
+          <td>~6.5:1</td>
+          <td><span class="badge badge-aaa">AAA</span></td>
+          <td><span class="cp" style="background:#CA8A04; color:#0C0A09;">Текст на золоте</span></td>
+        </tr>
+        <tr>
+          <td>#F2EDE6</td>
+          <td>#1C1917</td>
+          <td>~12.5:1</td>
+          <td><span class="badge badge-aaa">AAA</span></td>
+          <td><span class="cp" style="background:#1C1917; color:#F2EDE6;">Тёмный блок</span></td>
+        </tr>
+        <tr>
+          <td>#CA8A04</td>
+          <td>#FAFAF9</td>
+          <td>~3.6:1</td>
+          <td><span class="badge badge-aa">AA Large</span></td>
+          <td><span class="cp" style="background:#FAFAF9; color:#CA8A04; border:1px solid #E7E5E2;">Акцент-заголовок 24px+</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 03 ТИПОГРАФИКА -->
+  <section>
+    <div class="section-label">03 — Типографика</div>
+
+    <div class="font-pair">
+      <div class="font-card">
+        <div class="font-card-meta">Заголовки</div>
+        <div class="font-card-name">Inter Black · 900 · Uppercase</div>
+        <div class="demo-sans">КАК<br>У ПОТЁМ&shy;КИНА</div>
+      </div>
+      <div class="font-card">
+        <div class="font-card-meta">Цитаты / Подзаголовки</div>
+        <div class="font-card-name">Cormorant Garamond Italic · 400</div>
+        <div class="demo-serif">«Я здесь не чтобы<br>вас починить. Я здесь<br>чтобы пройти рядом.»</div>
+      </div>
+    </div>
+
+    <!-- Scale -->
+    <div class="type-row">
+      <div class="type-meta-small">H1 · Inter 900 · Uppercase · 72px · −0.03em</div>
+      <div class="t-h1">Дорога к Богу</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta-small">H2 · Inter 800 · Uppercase · 42px · −0.02em</div>
+      <div class="t-h2">Твои люди существуют.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta-small">H3 · Inter 700 · 24px</div>
+      <div class="t-h3">Мужчина, который гонится за женщиной, уже проиграл.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta-small">Цитата · Cormorant Italic · 28px</div>
+      <div class="t-quote">«Вы думаете проблема в отношениях.<br>Проблема в теле.»</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta-small">Body · Inter 400 · 17px · line-height 1.65</div>
+      <div class="t-body">Есть вещь, которую никто не говорит вслух. Отношения не починить разговором. Только телом. Когда тело размораживается — слова становятся ненужными.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta-small">Caption · Inter 500 · 12px · Uppercase · Muted</div>
+      <div class="t-caption">2026-06-16 · Telegram · Столп: Путь через тьму</div>
+    </div>
+
+    <table class="t-table">
+      <thead>
+        <tr><th>Элемент</th><th>Шрифт</th><th>Размер</th><th>Вес</th><th>Особенности</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>H1</td><td>Inter</td><td>56–80px</td><td>900</td><td>Uppercase, −0.03em</td></tr>
+        <tr><td>H2</td><td>Inter</td><td>36–48px</td><td>800</td><td>Uppercase, −0.02em</td></tr>
+        <tr><td>H3</td><td>Inter</td><td>22–28px</td><td>700</td><td>—</td></tr>
+        <tr><td>Цитата</td><td>Cormorant Garamond</td><td>22–30px</td><td>400 Italic</td><td>—</td></tr>
+        <tr><td>Body</td><td>Inter</td><td>16–18px</td><td>400</td><td>line-height 1.65</td></tr>
+        <tr><td>Caption</td><td>Inter</td><td>11–13px</td><td>500–700</td><td>Uppercase, 0.12em</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 04 КОМПОНЕНТЫ -->
+  <section>
+    <div class="section-label">04 — UI-компоненты</div>
+
+    <div class="type-meta-small" style="margin-bottom:20px;">Кнопки</div>
+    <div class="comp-row">
+      <a class="btn-cta" href="#">Записаться</a>
+      <div class="comp-label">Primary<br>#0C0A09 → hover: Gold</div>
+      <a class="btn-gold" href="#">Узнать больше</a>
+      <div class="comp-label">Gold CTA<br>#CA8A04</div>
+      <a class="btn-outline" href="#">О методе</a>
+      <div class="comp-label">Outline<br>border #0C0A09</div>
+    </div>
+
+    <hr>
+
+    <div class="type-meta-small" style="margin-bottom:20px;">Блок цитаты</div>
+    <div class="quote-block">
+      <q>Притяжение не возвращают через разговоры — его возвращают через полярность.</q>
+      <cite>Антон · Telegram · Мужское и женское</cite>
+    </div>
+
+    <hr>
+
+    <div class="type-meta-small" style="margin-bottom:20px;">Карточки контента</div>
+    <div class="cards-grid">
+      <div class="card card--accent">
+        <div class="card-tag">Столп · Путь через тьму</div>
+        <h3>Я знаю, где вы сейчас</h3>
+        <p>Потому что сам там был. Не теория — прожитое. Без надрыва — через факт.</p>
+      </div>
+      <div class="card card--dark">
+        <div class="card-tag">⭑ Пин-пост · Служение</div>
+        <h3>Я здесь не чтобы вас починить.</h3>
+        <p>Тихое достоинство. Служение, а не продажа.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 МОКАПЫ ПОСТОВ -->
+  <section>
+    <div class="section-label">05 — Мокапы постов</div>
+    <div class="mockups">
+
+      <div class="mockup">
+        <div class="mockup-img mockup-img--white">
+          <div class="mockup-big-text">МУЖЧИНА,<br>КОТОРЫЙ<br>ГОНИТСЯ,<br>УЖЕ ПРОИГРАЛ.</div>
+          <div class="mockup-gold-line"></div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-platform">Instagram · Карточка-тезис</div>
+          <div class="mockup-text">Не потому что она не хочет. Потому что он не знает, куда идёт.</div>
+        </div>
+      </div>
+
+      <div class="mockup">
+        <div class="mockup-img mockup-img--dark">
+          <div class="mockup-dark-text">«Дорога к Богу проходит через тело, а не мимо него.»</div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-platform">Telegram · Пост-мысль</div>
+          <div class="mockup-text">Философски, но телесно. Не абстракция — ощущение.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 06 ГОЛОС: АНТИПАТТЕРНЫ -->
+  <section>
+    <div class="section-label">06 — Голос: запрещено / правильно</div>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-bad">«Привет, друзья! Сегодня хочу поделиться...»</div>
+        <div class="voice-good">«Есть вещь, которую <span class="voice-accent">никто не говорит</span> вслух.»</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-bad">«5 шагов к гармоничным отношениям»</div>
+        <div class="voice-good">«Отношения не починить разговором. <span class="voice-accent">Только телом.</span>»</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-bad">«Я вам помогу решить эту проблему»</div>
+        <div class="voice-good">«Я знаю, где вы сейчас — <span class="voice-accent">потому что сам там был.</span>»</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-bad">«Будьте в ресурсе»</div>
+        <div class="voice-good">«<span class="voice-accent">Вернитесь в тело.</span>»</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-bad">«Прокачайте свои отношения»</div>
+        <div class="voice-good">«Отношения не прокачивают. Их <span class="voice-accent">возвращают — через тело.</span>»</div>
+      </div>
+      <div class="voice-card">
+        <div class="voice-bad">«Записывайтесь! Осталось 3 места!»</div>
+        <div class="voice-good">«Если чувствуете — <span class="voice-accent">ваше тело уже знает ответ.</span>»</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 ПРАВИЛА ДИЗАЙНА -->
+  <section>
+    <div class="section-label">07 — Ключевые правила визуала</div>
+    <div class="rules-grid">
+      <div class="rule-row">
+        <div class="rule-bullet">1</div>
+        <div class="rule-text"><strong>Border-radius: 0px</strong><span>Прямые углы — Правитель. Никаких закруглённых карточек.</span></div>
+      </div>
+      <div class="rule-row">
+        <div class="rule-bullet">2</div>
+        <div class="rule-text"><strong>Типографика главенствует</strong><span>Текст — основной визуальный элемент. Без декора и орнаментов.</span></div>
+      </div>
+      <div class="rule-row">
+        <div class="rule-bullet">3</div>
+        <div class="rule-text"><strong>Фото: боковой свет, 2700–3500K</strong><span>Никаких фронтальных студийных съёмок с улыбкой.</span></div>
+      </div>
+      <div class="rule-row">
+        <div class="rule-bullet">4</div>
+        <div class="rule-text"><strong>Переходы: 150–200ms</strong><span>Hover быстрый и чёткий. Ничего «плавного и мягкого».</span></div>
+      </div>
+      <div class="rule-row">
+        <div class="rule-bullet">5</div>
+        <div class="rule-text"><strong>Только SVG-иконки</strong><span>Никаких emoji как иконок. Heroicons или Lucide.</span></div>
+      </div>
+      <div class="rule-row">
+        <div class="rule-bullet">6</div>
+        <div class="rule-text"><strong>Touch targets: min 48×48px</strong><span>WCAG 2.5.5 — комфортное нажатие пальцем.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CSS ПЕРЕМЕННЫЕ -->
+  <section>
+    <div class="section-label">08 — CSS-переменные (для разработчика)</div>
+    <div class="code-box">
+<span class="code-comment">/* ─── ЦВЕТА ─────────────────────── */</span>
+<span class="code-var">--bg</span><span class="code-val">:            #FAFAF9;   </span><span class="code-comment">/* основной фон */</span>
+<span class="code-var">--bg-off</span><span class="code-val">:        #F5F3F0;   </span><span class="code-comment">/* карточки, второй слой */</span>
+<span class="code-var">--bg-dark</span><span class="code-val">:       #1C1917;   </span><span class="code-comment">/* hero, инверсные блоки */</span>
+<span class="code-var">--text</span><span class="code-val">:          #0C0A09;   </span><span class="code-comment">/* основной текст */</span>
+<span class="code-var">--text-muted</span><span class="code-val">:    #78716C;   </span><span class="code-comment">/* подписи, метаданные */</span>
+<span class="code-var">--accent</span><span class="code-val">:        #CA8A04;   </span><span class="code-comment">/* золото: CTA, выделения */</span>
+<span class="code-var">--accent-hover</span><span class="code-val">: #B45309;   </span><span class="code-comment">/* gold hover */</span>
+<span class="code-var">--divider</span><span class="code-val">:       #E7E5E2;   </span><span class="code-comment">/* разделители */</span>
+
+<span class="code-comment">/* ─── ШРИФТЫ ────────────────────── */</span>
+<span class="code-var">--font-sans</span><span class="code-val">:     'Inter', system-ui, sans-serif;</span>
+<span class="code-var">--font-serif</span><span class="code-val">:    'Cormorant Garamond', Georgia, serif;</span>
+
+<span class="code-comment">/* ─── РАЗМЕРЫ ───────────────────── */</span>
+<span class="code-var">--radius</span><span class="code-val">:        0px;       </span><span class="code-comment">/* прямые углы везде */</span>
+<span class="code-var">--transition</span><span class="code-val">:    180ms ease; </span><span class="code-comment">/* все hover-эффекты */</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">АН<span>ТО</span>Н</div>
+    <div class="footer-meta">
+      Брендбук v3 · 2026-06-16<br>
+      Inter 900 + Cormorant · White Base · Gold Accent<br>
+      Сгенерировано через UI UX Pro Max
+    </div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

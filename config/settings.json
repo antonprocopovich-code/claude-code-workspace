@@ -1,0 +1,61 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/Prokopovich/.claude/hooks/claude-notifier-on-stop.js\""
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/Prokopovich/.claude/hooks/claude-notifier-on-permission.js\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/Prokopovich/.claude/hooks/claude-notifier-on-question.js\""
+          }
+        ],
+        "matcher": "AskUserQuestion"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/Prokopovich/.claude/hooks/claude-notifier-on-prompt.js\""
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"/Users/Prokopovich/.claude/hooks/claude-notifier-on-subagent-stop.js\""
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statuslines/statusline.sh",
+    "padding": 0
+  },
+  "theme": "dark"
+}

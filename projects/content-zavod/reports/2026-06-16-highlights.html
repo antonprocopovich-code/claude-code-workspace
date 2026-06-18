@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Highlights — Антон Прокопович v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital@1&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg:       #1C1917;
+    --bg-sec:   #44403C;
+    --accent:   #CA8A04;
+    --text:     #F2EDE6;
+    --muted:    #A8A29E;
+    --border:   #292524;
+  }
+
+  html, body {
+    background: #0C0A09;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--text);
+    padding: 52px 32px 72px;
+  }
+
+  .page-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding-left: 0.22em;
+  }
+
+  .page-subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(2, 270px);
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .cover {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    background:
+      radial-gradient(circle at 50% 42%, rgba(202,138,4,0.10) 0%, rgba(202,138,4,0.0) 62%),
+      var(--bg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Corner brackets via pseudoelements */
+  .corner {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+  }
+  .corner::before, .corner::after {
+    content: "";
+    position: absolute;
+    background: var(--border);
+  }
+  .corner::before { width: 18px; height: 1px; }
+  .corner::after  { width: 1px; height: 18px; }
+
+  .corner.tl { top: 14px; left: 14px; }
+  .corner.tl::before { top: 0; left: 0; }
+  .corner.tl::after  { top: 0; left: 0; }
+
+  .corner.tr { top: 14px; right: 14px; }
+  .corner.tr::before { top: 0; right: 0; }
+  .corner.tr::after  { top: 0; right: 0; }
+
+  .corner.bl { bottom: 14px; left: 14px; }
+  .corner.bl::before { bottom: 0; left: 0; }
+  .corner.bl::after  { bottom: 0; left: 0; }
+
+  .corner.br { bottom: 14px; right: 14px; }
+  .corner.br::before { bottom: 0; right: 0; }
+  .corner.br::after  { bottom: 0; right: 0; }
+
+  .symbol {
+    font-size: 74px;
+    line-height: 1;
+    color: var(--accent);
+    margin-top: -6px;
+    margin-bottom: 14px;
+    text-shadow: 0 0 28px rgba(202,138,4,0.35), 0 0 14px rgba(202,138,4,0.15);
+  }
+
+  .divider {
+    width: 30px;
+    height: 1px;
+    background: rgba(202,138,4,0.70);
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--text);
+    letter-spacing: 0.25em;
+    text-align: center;
+    padding-left: 0.25em;
+  }
+
+  .subtitle {
+    font-family: 'Libre Baskerville', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 210px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="page-title">Instagram Highlights — Антон Прокопович</h1>
+  <p class="page-subtitle">8 обложек · архетип Маг · dark gold · v2 brendbuk</p>
+
+  <div class="grid">
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">◐</div>
+      <div class="divider"></div>
+      <div class="title">МОЙ ПУТЬ</div>
+      <div class="subtitle">дно · тьма · служение</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">∞</div>
+      <div class="divider"></div>
+      <div class="title">БЛИЗОСТЬ</div>
+      <div class="subtitle">священное · тело · пара</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">◑</div>
+      <div class="divider"></div>
+      <div class="title">ПОЛЯРНОСТЬ</div>
+      <div class="subtitle">притяжение · мужское · женское</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">≋</div>
+      <div class="divider"></div>
+      <div class="title">ЭНЕРГОВОЛНА</div>
+      <div class="subtitle">тело · подсознание · практика</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">◇</div>
+      <div class="divider"></div>
+      <div class="title">ЖЕНЩИНА</div>
+      <div class="subtitle">природа · притяжение · суть</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">◉</div>
+      <div class="divider"></div>
+      <div class="title">СЕМЬЯ</div>
+      <div class="subtitle">сохранить · защитить · выстроить</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">△</div>
+      <div class="divider"></div>
+      <div class="title">ОБЩИНЫ</div>
+      <div class="subtitle">свои люди · земля · движение</div>
+    </div>
+
+    <div class="cover">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <div class="symbol">◈</div>
+      <div class="divider"></div>
+      <div class="title">ОТЗЫВЫ</div>
+      <div class="subtitle">пары · мужчины · трансформация</div>
+    </div>
+
+  </div>
+
+</body>
+</html>

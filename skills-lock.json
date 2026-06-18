@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "skills": {
+    "Brainstorming Ideas Into Designs": {
+      "source": "obra/superpowers-skills",
+      "sourceType": "github",
+      "skillPath": "skills/collaboration/brainstorming/SKILL.md",
+      "computedHash": "162dafa2122d61cd5effbd17d49d99529c089cb20082617ef18a56ccc1a987d0"
+    },
+    "Subagent-Driven Development": {
+      "source": "obra/superpowers-skills",
+      "sourceType": "github",
+      "skillPath": "skills/collaboration/subagent-driven-development/SKILL.md",
+      "computedHash": "05262a9bf326c02dac20abd2c008fb4e32573531102a3c79e72ed39f7254a2f9"
+    },
+    "When Stuck - Problem-Solving Dispatch": {
+      "source": "obra/superpowers-skills",
+      "sourceType": "github",
+      "skillPath": "skills/problem-solving/when-stuck/SKILL.md",
+      "computedHash": "60c81e81f23332c8125a635f70a062bed94fc0d2c57f01235fb0fd0341b3fc97"
+    },
+    "Writing Plans": {
+      "source": "obra/superpowers-skills",
+      "sourceType": "github",
+      "skillPath": "skills/collaboration/writing-plans/SKILL.md",
+      "computedHash": "2a94f07591ee1e474665d589ab73d0e83be4071647f1bb639cf6a86d650353c3"
+    },
+    "ai-image-generation": {
+      "source": "runcomfy-com/skills",
+      "sourceType": "github",
+      "skillPath": "ai-image-generation/SKILL.md",
+      "computedHash": "765f5ce859b1943e948d4f747b768389d7a9f0c563d4e93f2a3231bc1a617944"
+    },
+    "ai-video-generation": {
+      "source": "qu-skills/skills",
+      "sourceType": "github",
+      "skillPath": "tools/video/ai-video-generation/SKILL.md",
+      "computedHash": "f36aabba18efd7d81e4c404bb5eaf2ba5154f20f10d0b1aa7562d59b7b3c2afc"
+    },
+    "brand-guidelines": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/brand-guidelines/SKILL.md",
+      "computedHash": "e48840db6ea772ceecdb68b4e50f8cc77e2534b7580aeaf4a6fe6ee7bd845d7d"
+    },
+    "caveman": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/caveman/SKILL.md",
+      "computedHash": "934433479903febc585bf6deb5f0cebc63137e3f86b7babe0aab1ecb94d6d7a4"
+    },
+    "consult": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/consult/SKILL.md",
+      "computedHash": "389dce9dc29a482c4294d9d8b7c1ef180666ebc1887d503c4bc52c306e6780b0"
+    },
+    "content-strategy": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "skillPath": "small-business/skills/content-strategy/SKILL.md",
+      "computedHash": "51aac4eccf14631c18d5a638e652b64cdaeb37d40757e3b5b6edf9a6029561b7"
+    },
+    "debate": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/debate/SKILL.md",
+      "computedHash": "2692a703ee6753d313b9e3523b6a56d6844d73028147a2a927d842b2d16f2abd"
+    },
+    "design-md": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/stitch-utilities/skills/design-md/SKILL.md",
+      "computedHash": "d3a4c7d2f2715a33662c8b06ffc16035d01965a8b4ed81c2958fb22ae94760f8"
+    },
+    "deslop": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/deslop/SKILL.md",
+      "computedHash": "30078b2c4a4eebac53363dd081a561b4193713978aebd4f6697c51ca45161193"
+    },
+    "discover-tasks": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/discover-tasks/SKILL.md",
+      "computedHash": "b75d1d1b2218ef45fd5c2973b9c642a16c24bed846cd9809fa3ba6619da7ef51"
+    },
+    "discovery-interview": {
+      "source": "parcadei/Continuous-Claude-v3",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/discovery-interview/SKILL.md",
+      "computedHash": "6f194cd10649bdcb62823f0ae3c43070dad725af451e9de8cc6a9b1404b98656"
+    },
+    "docx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/docx/SKILL.md",
+      "computedHash": "6962db07127ee540a56e4677f65576d0727668a1d67f7da8bc978f10791c2bfe"
+    },
+    "drift-analysis": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/drift-analysis/SKILL.md",
+      "computedHash": "86ac2d33101f1357a7a657cfc553535d0d2e288fa595d87c4b06eca01203acf9"
+    },
+    "enhance-agent-prompts": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-agent-prompts/SKILL.md",
+      "computedHash": "bff0493c2ce37cb107406a4abe5844df55b9129792d9cd417fe0d7efc3fcd122"
+    },
+    "enhance-claude-memory": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-claude-memory/SKILL.md",
+      "computedHash": "df23fa8f35d0e38aabd4a81375331183a72a5d40d3710ac40f6ae915961ce206"
+    },
+    "enhance-docs": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-docs/SKILL.md",
+      "computedHash": "3d7f66e955adae47ee168d3d8c3959e7d8d3ca41ff8b05b6c3914b2d39af2ed8"
+    },
+    "enhance-hooks": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-hooks/SKILL.md",
+      "computedHash": "67fa3cace518792b1500e9e6a8a1d6e66b54e2f0b102452bc4eb6dba8f916338"
+    },
+    "enhance-orchestrator": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-orchestrator/SKILL.md",
+      "computedHash": "faba30c0b7ecc8df0bc9a7ac4d955a67968b1ada7750d2c9eef284c70f54a4d7"
+    },
+    "enhance-prompts": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/enhance-prompts/SKILL.md",
+      "computedHash": "39e65f35c25c1e7ba8a7915fbfebfd37f410dba44a6b613cf04f66ccfe7eb484"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "4eabc66183767153e404b39d1b839b1c37f2d82d86f0a0d7e880a579d8d62336"
+    },
+    "high-end-visual-design": {
+      "source": "leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/soft-skill/SKILL.md",
+      "computedHash": "7db385e4c5370e5a7fca9704a1361b056e4504ea6a03924bb86f33a4f00b5c73"
+    },
+    "humanizer-ru": {
+      "source": "vladimir-human/humanizer-ru",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "309547d20662cdc24013b05b1477cb4f219df7977377e3b518fa0302da12180b"
+    },
+    "ii-couch-anton": {
+      "source": "anthropics/claude-plugins-official",
+      "sourceType": "github",
+      "skillPath": "plugins/ii-couch-anton/skills/ii-couch-anton/SKILL.md",
+      "computedHash": "15dda689810398790864b0a124621dfe45913e6c196bc78def6070b71c98c4f9"
+    },
+    "learn": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/learn/SKILL.md",
+      "computedHash": "6e6ac0d0cf1e52733dd3065a26369ca6362b72aa6c2f9839d6bd8e9fd49a241d"
+    },
+    "orchestrate-review": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/orchestrate-review/SKILL.md",
+      "computedHash": "9300cb210123ca0fabc2352b7d3cd1910a39ed8ea13459153bd8d49791ce6471"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/pdf/SKILL.md",
+      "computedHash": "cfbc539377088ca7e44a813b30c306327385bbd973cd7a721e1743f60837dd62"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
+    },
+    "stop-slop": {
+      "source": "hardikpandya/stop-slop",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "617bf97d33162a6bd0da4f40a97aac589de58e5a6c9cf011ed6108992210e7cb"
+    },
+    "validate-delivery": {
+      "source": "avifenesh/agentsys",
+      "sourceType": "github",
+      "skillPath": ".kiro/skills/validate-delivery/SKILL.md",
+      "computedHash": "2b62f43fa86f297b9a42140e0f705a0f7934720bc24330c0a882d5efc4c33f54"
+    }
+  }
+}

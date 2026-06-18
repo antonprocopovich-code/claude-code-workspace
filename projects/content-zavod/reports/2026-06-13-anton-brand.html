@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Личный бренд Антона — Полный отчёт 2026-06-13</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+:root{--bg:#0F0D0B;--bg2:#181310;--bg3:#2C2420;--acc:#8B3A2A;--acc2:#a8472f;--tx:#F2EDE6;--tx2:#c0b8b0;--tx3:#7a706a;--bd:#38302a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);font-size:13px;line-height:1.65;}
+@page{size:A4;margin:0;}
+
+/* COVER */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:72px 80px;background:var(--bg);page-break-after:always;position:relative;border-bottom:3px solid var(--acc);}
+.cover::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 75% 40%,rgba(139,58,42,.22) 0%,transparent 60%);pointer-events:none;}
+.c-eyebrow{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--acc);margin-bottom:52px;}
+.c-title{font-weight:900;font-size:72px;line-height:1.0;letter-spacing:-2px;text-transform:uppercase;color:var(--tx);margin-bottom:8px;}
+.c-title span{color:var(--acc2);}
+.c-sub{font-family:'Lora',serif;font-style:italic;font-size:18px;color:var(--tx3);margin-bottom:64px;max-width:480px;line-height:1.6;}
+.c-meta{display:flex;gap:48px;}
+.c-meta-i label{display:block;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--tx3);margin-bottom:4px;}
+.c-meta-i span{font-size:13px;font-weight:600;color:var(--tx2);}
+.c-bar{position:absolute;bottom:72px;left:80px;width:56px;height:3px;background:var(--acc);}
+
+/* SECTION */
+.sec{padding:56px 80px;border-bottom:1px solid var(--bd);page-break-inside:avoid;}
+.sec-eye{font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--acc);margin-bottom:8px;}
+.sec-h{font-weight:900;font-size:28px;letter-spacing:-0.5px;text-transform:uppercase;color:var(--tx);margin-bottom:6px;}
+.sec-desc{font-family:'Lora',serif;font-size:14px;color:var(--tx3);margin-bottom:36px;max-width:560px;}
+hr.div{border:none;border-top:1px solid var(--bd);margin:32px 0;}
+
+/* GRID CARDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;}
+.card{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:22px;}
+.card-ey{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:8px;}
+.card-h{font-weight:700;font-size:15px;color:var(--tx);margin-bottom:8px;line-height:1.3;}
+.card-b{font-size:12px;color:var(--tx2);line-height:1.6;}
+.card.hi{border-color:var(--acc);background:rgba(139,58,42,.1);}
+
+/* PILLARS */
+.pillar{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--bd);}
+.pillar:last-child{border-bottom:none;}
+.p-num{font-weight:900;font-size:32px;color:var(--bg3);min-width:40px;line-height:1;}
+.p-name{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--tx);margin-bottom:4px;}
+.p-msg{font-family:'Lora',serif;font-style:italic;font-size:12px;color:var(--acc2);margin-bottom:4px;}
+.p-body{font-size:12px;color:var(--tx2);line-height:1.55;}
+
+/* PALETTE */
+.palette{display:flex;gap:12px;margin-bottom:28px;}
+.sw{flex:1;border-radius:5px;overflow:hidden;border:1px solid var(--bd);}
+.sw-c{height:70px;}
+.sw-i{background:var(--bg3);padding:10px 12px;}
+.sw-hex{font-weight:700;font-size:12px;color:var(--tx);font-family:monospace;margin-bottom:2px;}
+.sw-n{font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;}
+
+/* TOV */
+.tov-r{display:grid;grid-template-columns:140px 1fr 1fr;gap:0;border-bottom:1px solid var(--bd);padding:13px 0;}
+.tov-r:first-child{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);}
+.t-ch{font-weight:700;font-size:12px;color:var(--tx);}
+.t-y{font-size:12px;color:var(--tx2);padding-right:12px;}
+.t-n{font-size:12px;color:var(--tx3);font-style:italic;}
+
+/* VOCAB */
+.vblock{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:20px;margin-bottom:14px;}
+.v-ey{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:12px;}
+.v-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.vtag{background:var(--bg);border:1px solid var(--bd);border-radius:3px;padding:4px 10px;font-size:12px;color:var(--tx2);}
+.vtag.ban{background:rgba(139,58,42,.12);border-color:rgba(139,58,42,.35);color:var(--acc2);text-decoration:line-through;}
+
+/* ANTI */
+.anti-r{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--bd);}
+.a-no{font-size:12px;color:var(--tx3);}
+.a-no::before{content:'✕  ';color:var(--acc);}
+.a-yes{font-size:12px;color:var(--tx2);}
+.a-yes::before{content:'→  ';color:var(--acc);}
+
+/* FUNNEL */
+.fstage{display:flex;gap:20px;padding:18px 20px;background:var(--bg3);border-left:3px solid var(--acc);border-radius:0 5px 5px 0;margin-bottom:10px;}
+.f-badge{font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--acc2);background:rgba(139,58,42,.15);border:1px solid rgba(139,58,42,.3);padding:3px 8px;border-radius:3px;height:fit-content;min-width:52px;text-align:center;}
+.f-h{font-weight:700;font-size:13px;color:var(--tx);margin-bottom:4px;}
+.f-d{font-size:12px;color:var(--tx2);line-height:1.55;margin-bottom:6px;}
+.f-kpi{font-size:10px;color:var(--tx3);font-family:monospace;}
+
+/* KPI GRID */
+.kpi-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;}
+.kpi-c{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:16px;}
+.kpi-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);margin-bottom:6px;font-weight:600;}
+.kpi-v{font-weight:800;font-size:20px;color:var(--acc2);line-height:1;margin-bottom:4px;}
+.kpi-d{font-size:11px;color:var(--tx3);line-height:1.45;}
+
+/* CRISIS */
+.crisis{background:var(--bg3);border:1px solid var(--bd);border-radius:5px;padding:16px;margin-bottom:10px;}
+.cr-cond{font-size:11px;color:var(--acc2);font-family:monospace;font-weight:600;margin-bottom:6px;}
+.cr-act{font-size:12px;color:var(--tx2);line-height:1.5;}
+
+/* PLAN */
+.wk{margin-bottom:28px;}
+.wk-h{font-weight:800;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);padding:7px 0;border-bottom:1px solid var(--acc);margin-bottom:8px;}
+table.pt{width:100%;border-collapse:collapse;font-size:11px;}
+table.pt th{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);text-align:left;padding:6px 8px;border-bottom:1px solid var(--bd);}
+table.pt td{padding:8px 8px;border-bottom:1px solid var(--bd);color:var(--tx2);vertical-align:top;line-height:1.4;}
+table.pt tr:last-child td{border-bottom:none;}
+.td-n{font-weight:700;color:var(--tx3);font-size:10px;}
+.td-dt{font-family:monospace;font-size:10px;color:var(--tx3);white-space:nowrap;}
+.td-tp{color:var(--tx);font-weight:500;}
+.badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 5px;border-radius:2px;}
+.bt{background:rgba(139,58,42,.2);color:var(--acc2);}
+.bm{background:rgba(60,100,160,.2);color:#7aabdf;}
+.bb{background:rgba(60,160,80,.2);color:#7adf9a;}
+.bl{background:rgba(160,120,40,.2);color:#dfbe5a;}
+
+/* DRAFTS */
+.draft{margin-bottom:28px;page-break-inside:avoid;}
+.draft-hd{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid var(--bd);}
+.draft-pl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:700;margin-bottom:4px;}
+.draft-tt{font-weight:800;font-size:16px;color:var(--tx);line-height:1.25;max-width:440px;}
+.draft-tags{display:flex;flex-direction:column;gap:5px;align-items:flex-end;}
+.draft-body{background:var(--bg3);border-left:3px solid var(--acc);padding:22px 26px;border-radius:0 5px 5px 0;font-family:'Lora',serif;font-size:14px;color:var(--tx);line-height:1.8;}
+.draft-body p{margin-bottom:14px;}
+.draft-body p:last-child{margin-bottom:0;}
+.sc-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--tx3);font-weight:700;margin-bottom:6px;}
+.sc-txt{font-family:'Lora',serif;font-size:13px;color:var(--tx);line-height:1.7;padding-left:12px;border-left:2px solid var(--bd);margin-bottom:18px;}
+.sc-txt.hook{font-size:18px;font-weight:700;border-left-color:var(--acc);padding-left:16px;}
+.draft-cta{margin-top:14px;padding:12px 16px;background:rgba(139,58,42,.1);border:1px solid rgba(139,58,42,.3);border-radius:4px;font-size:12px;color:var(--acc2);}
+.draft-ht{margin-top:8px;font-size:11px;color:var(--tx3);}
+
+/* FOOTER */
+.footer{padding:32px 80px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;}
+.footer-l{font-size:11px;color:var(--tx3);}
+.footer-r{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--acc);font-weight:700;}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="c-eyebrow">Контент Завод · Агентный пайплайн · 2026-06-13</div>
+  <div class="c-title">Личный<br>бренд<br><span>Антона</span></div>
+  <div class="c-sub">Полный стратегический отчёт: позиционирование, брендбук, воронки, монетизация, контент-план 4 недели и готовые посты.</div>
+  <div class="c-meta">
+    <div class="c-meta-i"><label>Дата</label><span>13 июня 2026</span></div>
+    <div class="c-meta-i"><label>Платформы</label><span>TG · IG · TikTok · VK · Threads</span></div>
+    <div class="c-meta-i"><label>Агентов</label><span>6 из 8</span></div>
+    <div class="c-meta-i"><label>Статус</label><span>Готово к запуску</span></div>
+  </div>
+  <div class="c-bar"></div>
+</div>
+
+<!-- 1. ПОЗИЦИОНИРОВАНИЕ -->
+<div class="sec">
+  <div class="sec-eye">Агент 1 — Стратег</div>
+  <div class="sec-h">Позиционирование</div>
+  <div class="sec-desc">Смысловая база бренда: WHY, HOW, WHAT, архетип и семь столпов ценностей.</div>
+  <div class="g2">
+    <div class="card"><div class="card-ey">WHY — Миссия</div><div class="card-h">Снизить число разводов. Защитить семью. Строить общины.</div><div class="card-b">Антон прошёл через разрушенный брак, 12 лет боли, депрессию и суицидальные мысли. Вышел через тело, близость и духовность. Теперь ведёт других тем же путём.</div></div>
+    <div class="card"><div class="card-ey">HOW — Метод</div><div class="card-h">Авторская методология «Энерговолна»</div><div class="card-b">Синтез телесной терапии, месмеризма, гипноза и энергетических практик. Работа с телом и подсознанием как единый инструмент трансформации.</div></div>
+    <div class="card"><div class="card-ey">WHAT — Результат</div><div class="card-h">Пары возвращают близость. Мужчины перестают гнаться.</div><div class="card-b">Семьи сохраняются. Люди открывают секс как духовный инструмент. Движущиеся к Богу мужчины притягивают женщин — не гоняясь за ними.</div></div>
+    <div class="card"><div class="card-ey">Архетип</div><div class="card-h">Маг + Мудрец + Правитель</div><div class="card-b">Маг констатирует — не уговаривает. Мудрец знает из опыта — не из книг. Правитель строит — не рассуждает. Говорит тише, но весомее.</div></div>
+  </div>
+  <hr class="div">
+  <div class="pillar"><div class="p-num">01</div><div><div class="p-name">Священная близость</div><div class="p-msg">«То, что вы считаете проблемой в сексе — это дверь, а не тупик.»</div><div class="p-body">Секс — духовный инструмент эволюции пары. Через него достигают трансцендентных состояний, которые ум не в состоянии описать.</div></div></div>
+  <div class="pillar"><div class="p-num">02</div><div><div class="p-name">Путь через тьму</div><div class="p-msg">«Я знаю, где вы сейчас — потому что сам там был.»</div><div class="p-body">Настоящая экспертиза рождается из личного прохождения через дно. Депрессия и потеря себя — часть пути, дающая понимание изнутри.</div></div></div>
+  <div class="pillar"><div class="p-num">03</div><div><div class="p-name">Мужское и женское как полярность</div><div class="p-msg">«Притяжение не возвращают через разговоры — его возвращают через полярность.»</div><div class="p-body">Конфликт в паре — энергетическая проблема. Потеря полярности — причина угасания. Восстанавливается через тело, не переговоры.</div></div></div>
+  <div class="pillar"><div class="p-num">04</div><div><div class="p-name">Интеграция тела и духа (Энерговолна)</div><div class="p-msg">«Дорога к Богу проходит через тело, а не мимо него.»</div><div class="p-body">Тело, подсознание и духовность — не отдельные сферы. Авторская методология объединяет телесные практики, месмеризм, гипноз и энергоработу.</div></div></div>
+  <div class="pillar"><div class="p-num">05</div><div><div class="p-name">Природа женщины</div><div class="p-msg">«Не беги за женщиной — двигайся к Богу, и она будет рядом.»</div><div class="p-body">Мужчина, понимающий природу женщины, не гоняется за ней — он движется к своим целям и Богу, и тогда женщина сама оказывается рядом.</div></div></div>
+  <div class="pillar"><div class="p-num">06</div><div><div class="p-name">Мировоззрение и новые общины</div><div class="p-msg">«Твои люди существуют. Мы строим — не просто говорим.»</div><div class="p-body">Slavic-философия, жизнь на земле, здоровье, природа — единое мировоззрение. Антон объединяет людей с этим взглядом и ведёт к созданию реальных поселений.</div></div></div>
+  <div class="pillar"><div class="p-num">07</div><div><div class="p-name">Служение и системный взгляд</div><div class="p-msg">«Я здесь не чтобы вас починить. Я здесь чтобы пройти рядом.»</div><div class="p-body">Работает не ради денег и статуса. Видит, что разрушение семей выгодно определённым структурам. Называет это вслух и предлагает альтернативу.</div></div></div>
+</div>
+
+<!-- 2. БРЕНДБУК -->
+<div class="sec">
+  <div class="sec-eye">Агент 2 — Брендбук</div>
+  <div class="sec-h">Визуальная и вербальная идентичность</div>
+  <div class="sec-desc">Цветовая палитра, типографика, Tone of Voice, словарь и анти-паттерны.</div>
+  <div class="palette">
+    <div class="sw"><div class="sw-c" style="background:#0F0D0B"></div><div class="sw-i"><div class="sw-hex">#0F0D0B</div><div class="sw-n">Фон · Глубина</div></div></div>
+    <div class="sw"><div class="sw-c" style="background:#8B3A2A"></div><div class="sw-i"><div class="sw-hex">#8B3A2A</div><div class="sw-n">Акцент · Огонь</div></div></div>
+    <div class="sw"><div class="sw-c" style="background:#F2EDE6"></div><div class="sw-i"><div class="sw-hex">#F2EDE6</div><div class="sw-n">Текст · Пергамент</div></div></div>
+    <div class="sw"><div class="sw-c" style="background:#2C2420"></div><div class="sw-i"><div class="sw-hex">#2C2420</div><div class="sw-n">Нейтральный</div></div></div>
+  </div>
+  <hr class="div">
+  <div class="tov-r"><div>Характеристика</div><div>Так</div><div>Не так</div></div>
+  <div class="tov-r"><div class="t-ch">Прямой</div><div class="t-y">«Это разрушает семьи» — без смягчений и оговорок</div><div class="t-n">«Ну, можно так сказать, что в некоторых случаях...»</div></div>
+  <div class="tov-r"><div class="t-ch">Весомый</div><div class="t-y">Короткие фразы. Каждое предложение — завершённая мысль.</div><div class="t-n">Длинные абзацы с вводными словами</div></div>
+  <div class="tov-r"><div class="t-ch">Личный</div><div class="t-y">«Я прошёл через это» — всегда от первого лица</div><div class="t-n">«Психологи рекомендуют», «эксперты считают»</div></div>
+  <div class="tov-r"><div class="t-ch">Философский из жизни</div><div class="t-y">Глубина без академизма. Идея приземлена в ощущение.</div><div class="t-n">«Согласно теории Юнга...»</div></div>
+  <div class="tov-r"><div class="t-ch">Строящий</div><div class="t-y">Называет проблему и сразу показывает путь</div><div class="t-n">«Всё плохо» без альтернативы</div></div>
+  <hr class="div">
+  <div class="vblock"><div class="v-ey">Словарь — используем</div><div class="v-tags"><span class="vtag">путь</span><span class="vtag">тело</span><span class="vtag">близость</span><span class="vtag">полярность</span><span class="vtag">Бог</span><span class="vtag">служение</span><span class="vtag">движение</span><span class="vtag">строить</span><span class="vtag">общины</span><span class="vtag">семья</span><span class="vtag">природа</span><span class="vtag">земля</span><span class="vtag">Энерговолна</span><span class="vtag">трансформация</span><span class="vtag">священное</span><span class="vtag">огонь</span><span class="vtag">свои люди</span><span class="vtag">настоящее</span></div></div>
+  <div class="vblock"><div class="v-ey">Стоп-слова — запрещено</div><div class="v-tags"><span class="vtag ban">контент</span><span class="vtag ban">лиды</span><span class="vtag ban">охваты</span><span class="vtag ban">прокачать</span><span class="vtag ban">токсичный</span><span class="vtag ban">ресурс</span><span class="vtag ban">экспертность</span><span class="vtag ban">зона комфорта</span><span class="vtag ban">нетворкинг</span><span class="vtag ban">успешный успех</span><span class="vtag ban">инструменты счастья</span></div></div>
+  <hr class="div">
+  <div class="anti-r"><div class="a-no">«Привет, друзья! Сегодня хочу поделиться...»</div><div class="a-yes">«Есть вещь, которую никто не говорит вслух.»</div></div>
+  <div class="anti-r"><div class="a-no">«5 шагов к гармоничным отношениям»</div><div class="a-yes">«Отношения не починить разговором. Только телом.»</div></div>
+  <div class="anti-r"><div class="a-no">«Записывайтесь! Осталось 3 места!»</div><div class="a-yes">«Если вы читаете это и чувствуете — напишите мне.»</div></div>
+  <div class="anti-r"><div class="a-no">«Прокачайте свои отношения»</div><div class="a-yes">«Отношения не прокачивают. Их возвращают через тело.»</div></div>
+</div>
+
+<!-- 3. МОНЕТИЗАЦИЯ -->
+<div class="sec">
+  <div class="sec-eye">Агент 6 — Продюсер</div>
+  <div class="sec-h">Стратегия монетизации</div>
+  <div class="sec-desc">Продуктовая матрица, воронка, KPI-дашборд и антикризисные триггеры.</div>
+  <div class="g3">
+    <div class="card"><div class="card-ey">Tripwire · Вход</div><div class="card-h">Диагностическая сессия</div><div style="font-weight:800;font-size:16px;color:var(--acc2);margin-bottom:10px;">5 000 — 7 000 ₽</div><div class="card-b">60 минут: понять корень потери близости. Конкретный вектор без размытых советов. Снижает барьер входа.</div></div>
+    <div class="card"><div class="card-ey">Core · Основной</div><div class="card-h">Личная работа — программа 8 сессий</div><div style="font-weight:800;font-size:16px;color:var(--acc2);margin-bottom:10px;">60 000 — 90 000 ₽</div><div class="card-b">Два трека: «Пара» — возвращение полярности. «Мужчина» — понимание природы женщины и движение к своим целям.</div></div>
+    <div class="card hi"><div class="card-ey">High Ticket · Только по запросу</div><div class="card-h">Сопровождение 3 месяца + движение</div><div style="font-weight:800;font-size:16px;color:var(--acc2);margin-bottom:10px;">150 000 — 250 000 ₽</div><div class="card-b">Еженедельные сессии + поддержка + ранний доступ к строящимся общинам. 3–5 мест. Не продаётся публично.</div></div>
+  </div>
+  <hr class="div">
+  <div class="fstage"><div class="f-badge">TOFU</div><div><div class="f-h">Холодный трафик · Охват</div><div class="f-d">TikTok/Reels 30–60 сек, острые мысли в Threads. Удар болью за 2–3 секунды.</div><div class="f-kpi">KPI: +200–400 подп./мес · сохранения ≥ 5% от просмотров</div></div></div>
+  <div class="fstage"><div class="f-badge">MOFU</div><div><div class="f-h">Прогрев · Доверие</div><div class="f-d">Личные истории, кейсы, серия по 7 столпам. Показать: я был там — я вышел — ты выйдешь.</div><div class="f-kpi">KPI: ER Telegram ≥ 15% · ER Instagram ≥ 4% · отклики ≥ 5/пост</div></div></div>
+  <div class="fstage"><div class="f-badge">BOFU</div><div><div class="f-h">Конверсия · Заявки</div><div class="f-d">Пост-приглашение раз в 2 недели. «Если чувствуете — напишите мне.» Созвон → диагностика → программа.</div><div class="f-kpi">KPI: 10–20 DM/мес · DM→диагностика 40–60% · диагностика→программа 30–50%</div></div></div>
+  <hr class="div">
+  <div class="kpi-g">
+    <div class="kpi-c"><div class="kpi-l">Рост аудитории</div><div class="kpi-v">300–500</div><div class="kpi-d">подписчиков/мес суммарно TG + IG</div></div>
+    <div class="kpi-c"><div class="kpi-l">ER Telegram</div><div class="kpi-v">≥ 15%</div><div class="kpi-d">алерт при падении < 10% два поста подряд</div></div>
+    <div class="kpi-c"><div class="kpi-l">Заявки / месяц</div><div class="kpi-v">10–20</div><div class="kpi-d">входящих DM. Алерт: < 5 — усилить BOFU</div></div>
+    <div class="kpi-c"><div class="kpi-l">Конверсия</div><div class="kpi-v">30–50%</div><div class="kpi-d">диагностика → программа</div></div>
+    <div class="kpi-c"><div class="kpi-l">Выручка (core)</div><div class="kpi-v">120–360к</div><div class="kpi-d">2–4 программы × 60–90к ₽/мес</div></div>
+    <div class="kpi-c"><div class="kpi-l">NPS</div><div class="kpi-v">≥ 8/10</div><div class="kpi-d">рефералы ≥ 1 новый на 3 завершивших</div></div>
+  </div>
+  <div class="crisis"><div class="cr-cond">if ER_telegram < 10% — два поста подряд</div><div class="cr-act">Следующие 2 поста — личная история от первого лица. Проверить: нет ли повторяющихся структур.</div></div>
+  <div class="crisis"><div class="cr-cond">if DM_monthly < 5</div><div class="cr-act">Добавить прямой пост-приглашение в течение 7 дней. Проверить: когда последний раз был BOFU-пост?</div></div>
+  <div class="crisis"><div class="cr-cond">if conversion_diagnostic_to_program < 20%</div><div class="cr-act">Разобрать 3 последних отказа. Возможно, лид-магнит привлекает не тот аватар. Скорректировать TOFU.</div></div>
+  <div class="crisis"><div class="cr-cond">if TikTok_views < 1000 — три ролика подряд</div><div class="cr-act">Пересмотреть первые 3 секунды. Тест двух новых крюков: провокационный вопрос и парадоксальное утверждение.</div></div>
+</div>
+
+<!-- 4. КОНТЕНТ-ПЛАН -->
+<div class="sec">
+  <div class="sec-eye">Агент 7 — Контент-Директор · DeepSeek V4 Pro</div>
+  <div class="sec-h">Контент-план · 4 недели</div>
+  <div class="sec-desc">16 июня — 13 июля 2026. 28 публикаций по 5 платформам. Статус: согласован Продюсером.</div>
+
+  <div class="wk">
+    <div class="wk-h">Неделя 1 (16–22 июня) — Столп 2: Путь через тьму · Столп 5: Природа женщины · TOFU</div>
+    <table class="pt"><tr><th>#</th><th>Дата</th><th>Платформа</th><th>Тема поста</th><th>Воронка</th><th>Формат</th></tr>
+    <tr><td class="td-n">1</td><td class="td-dt">16.06</td><td>TikTok, Reels</td><td class="td-tp">«Чем добрее ты с ней — тем меньше она тебя хочет»</td><td><span class="badge bt">TOFU</span></td><td>Видео 30–60с</td></tr>
+    <tr><td class="td-n">2</td><td class="td-dt">17.06</td><td>Threads, TG</td><td class="td-tp">«Мужчина, который гонится за женщиной, уже проиграл»</td><td><span class="badge bt">TOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">3</td><td class="td-dt">18.06</td><td>TG, IG, ВК</td><td class="td-tp">«Я был на дне. 12 лет брака, разрушенного в ноль»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    <tr><td class="td-n">4</td><td class="td-dt">19.06</td><td>Threads, TG</td><td class="td-tp">«Коучи дают советы, не зная вкуса отчаяния»</td><td><span class="badge bt">TOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">5</td><td class="td-dt">20.06</td><td>TikTok, Reels</td><td class="td-tp">«Ты стараешься, а она отдаляется. Причина в механике»</td><td><span class="badge bt">TOFU</span></td><td>Видео 30–60с</td></tr>
+    <tr><td class="td-n">6</td><td class="td-dt">21.06</td><td>TG, IG, ВК</td><td class="td-tp">«5 признаков потери полярности» — голосовое Антона</td><td><span class="badge bl">Лид-магнит</span></td><td>Голосовое</td></tr>
+    <tr><td class="td-n">7</td><td class="td-dt">22.06</td><td>Threads</td><td class="td-tp">«Не беги за женщиной — двигайся к Богу, и она будет рядом»</td><td><span class="badge bt">TOFU</span></td><td>Пост-мысль</td></tr>
+    </table>
+  </div>
+
+  <div class="wk">
+    <div class="wk-h">Неделя 2 (23–29 июня) — Столп 1: Священная близость · Столп 3: Полярность · MOFU</div>
+    <table class="pt"><tr><th>#</th><th>Дата</th><th>Платформа</th><th>Тема поста</th><th>Воронка</th><th>Формат</th></tr>
+    <tr><td class="td-n">8</td><td class="td-dt">23.06</td><td>TikTok, Reels</td><td class="td-tp">«Секс в долгом браке исчезает не потому, что прошла страсть»</td><td><span class="badge bm">MOFU</span></td><td>Видео 30–60с</td></tr>
+    <tr><td class="td-n">9</td><td class="td-dt">24.06</td><td>TG, IG, ВК</td><td class="td-tp">«То, что вы считаете проблемой в сексе — это дверь, а не тупик»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    <tr><td class="td-n">10</td><td class="td-dt">25.06</td><td>Threads, TG</td><td class="td-tp">«Притяжение не возвращают через разговоры — через полярность»</td><td><span class="badge bm">MOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">11</td><td class="td-dt">26.06</td><td>TikTok, Reels</td><td class="td-tp">«Почему "партнёры по быту" — это приговор»</td><td><span class="badge bm">MOFU</span></td><td>Видео 45–60с</td></tr>
+    <tr><td class="td-n">12</td><td class="td-dt">27.06</td><td>TG, IG, ВК</td><td class="td-tp">Кейс: «Пара 12 лет. Через 3 сессии — она снова почувствовала его»</td><td><span class="badge bm">MOFU</span></td><td>Кейс</td></tr>
+    <tr><td class="td-n">13</td><td class="td-dt">28.06</td><td>Threads</td><td class="td-tp">«Мужчина и женщина — два полюса. Искра — от разности потенциалов»</td><td><span class="badge bm">MOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">14</td><td class="td-dt">29.06</td><td>Telegram</td><td class="td-tp">«Почему разговоры о чувствах не возвращают близость. Тело — главный вход»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    </table>
+  </div>
+
+  <div class="wk">
+    <div class="wk-h">Неделя 3 (30 июня — 6 июля) — Столп 4: Энерговолна · Кейсы · MOFU</div>
+    <table class="pt"><tr><th>#</th><th>Дата</th><th>Платформа</th><th>Тема поста</th><th>Воронка</th><th>Формат</th></tr>
+    <tr><td class="td-n">15</td><td class="td-dt">30.06</td><td>TikTok, Reels</td><td class="td-tp">«Ты медитируешь, дышишь — а внутри ничего не меняется. Вот почему»</td><td><span class="badge bm">MOFU</span></td><td>Видео 45–60с</td></tr>
+    <tr><td class="td-n">16</td><td class="td-dt">01.07</td><td>TG, IG, ВК</td><td class="td-tp">«Энерговолна — это не терапия. Это инструмент, который ты осваиваешь сам»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    <tr><td class="td-n">17</td><td class="td-dt">02.07</td><td>Threads, TG</td><td class="td-tp">«Тело, подсознание и духовность — слои одного пути»</td><td><span class="badge bm">MOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">18</td><td class="td-dt">03.07</td><td>TikTok, Reels</td><td class="td-tp">Кейс: «Мужчина пришёл растерянный. Через 4 сессии — перестал догонять. Она осталась»</td><td><span class="badge bm">MOFU</span></td><td>Кейс в видео</td></tr>
+    <tr><td class="td-n">19</td><td class="td-dt">04.07</td><td>TG, IG, ВК</td><td class="td-tp">«Почему практики работают только на сессии — и не работают в жизни»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    <tr><td class="td-n">20</td><td class="td-dt">05.07</td><td>Threads</td><td class="td-tp">«Ты не "не чувствуешь". Ты разучился слышать. Тело говорит»</td><td><span class="badge bm">MOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">21</td><td class="td-dt">06.07</td><td>Telegram</td><td class="td-tp">Кейс: «Пара не разговаривала 2 месяца. Вернулась к близости без единого разговора»</td><td><span class="badge bm">MOFU</span></td><td>Кейс</td></tr>
+    </table>
+  </div>
+
+  <div class="wk">
+    <div class="wk-h">Неделя 4 (7–13 июля) — Столп 6: Общины · BOFU · Приглашение</div>
+    <table class="pt"><tr><th>#</th><th>Дата</th><th>Платформа</th><th>Тема поста</th><th>Воронка</th><th>Формат</th></tr>
+    <tr><td class="td-n">22</td><td class="td-dt">07.07</td><td>TikTok, Reels</td><td class="td-tp">«Ты не странный. Ты просто живёшь по другим правилам. Твои люди существуют»</td><td><span class="badge bt">TOFU</span></td><td>Видео 30–45с</td></tr>
+    <tr><td class="td-n">23</td><td class="td-dt">08.07</td><td>TG, IG, ВК</td><td class="td-tp">Манифест: «Твои люди существуют. Мы строим — не просто говорим»</td><td><span class="badge bm">MOFU</span></td><td>Манифест</td></tr>
+    <tr><td class="td-n">24</td><td class="td-dt">09.07</td><td>Threads, TG</td><td class="td-tp">«Современный мир делает тебя одиноким. Но проблема не в тебе»</td><td><span class="badge bm">MOFU</span></td><td>Пост-мысль</td></tr>
+    <tr><td class="td-n">25</td><td class="td-dt">10.07</td><td>TikTok, Reels</td><td class="td-tp">«Как будет выглядеть первая община: не утопия, а конкретный план»</td><td><span class="badge bm">MOFU</span></td><td>Видео 60–90с</td></tr>
+    <tr><td class="td-n">26</td><td class="td-dt">11.07</td><td>TG, IG, ВК</td><td class="td-tp">«Почему я строю общины, а не просто веду блог»</td><td><span class="badge bm">MOFU</span></td><td>Эссе</td></tr>
+    <tr><td class="td-n">27</td><td class="td-dt">12.07</td><td>Telegram</td><td class="td-tp">«Работаю с парами и мужчинами один-на-один. Если чувствуете — напишите мне»</td><td><span class="badge bb">BOFU</span></td><td>Приглашение</td></tr>
+    <tr><td class="td-n">28</td><td class="td-dt">13.07</td><td>ВК, Instagram</td><td class="td-tp">«Закрытое сообщество для тех, кто хочет жить иначе»</td><td><span class="badge bb">BOFU</span></td><td>Пост-анонс</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 5. ЧЕРНОВИКИ -->
+<div class="sec">
+  <div class="sec-eye">Контент-Директор (DeepSeek V4 Pro) + Агент 8 — Дизайнер</div>
+  <div class="sec-h">Готовые черновики постов</div>
+  <div class="sec-desc">3 поста — TOFU (TikTok), MOFU (Telegram), BOFU (Telegram). Написано DeepSeek V4 Pro, упаковано Дизайнером.</div>
+
+  <!-- Draft 1 -->
+  <div class="draft">
+    <div class="draft-hd">
+      <div><div class="draft-pl">TikTok / Instagram Reels · TOFU · Природа женщины</div><div class="draft-tt">«Чем добрее ты с ней — тем меньше она тебя хочет»</div></div>
+      <div class="draft-tags"><span class="badge bt">TOFU</span><span class="badge" style="background:rgba(255,255,255,.05);color:var(--tx3)">~50 сек</span></div>
+    </div>
+    <div class="draft-body">
+      <div class="sc-lbl">0–3 сек · Хук</div>
+      <div class="sc-txt hook">Чем добрее ты с ней — тем меньше она тебя хочет.</div>
+      <div class="sc-lbl">3–8 сек · Проблема</div>
+      <div class="sc-txt">Ты стараешься. Угождаешь. Подстраиваешься.<br>И она всё дальше.</div>
+      <div class="sc-lbl">8–40 сек · Контент</div>
+      <div class="sc-txt">Потому что природа притяжения — это не договор. Это полярность.<br><br>Женщине не нужен друг. Ей нужен тот, кто не боится её потерять.<br><br>Когда ты становишься как она — ты теряешь разницу в потенциалах. Нет разности — нет искры.<br><br>Мужчина, который гонится за женщиной, уже проиграл. Не потому что она не хочет. А потому что он бросил свой путь.</div>
+      <div class="sc-lbl">40–50 сек · CTA</div>
+      <div class="sc-txt">Направь ту же энергию на движение к своим целям и Богу.<br>Женщина придёт сама.<br>Ты не должен заслуживать. Ты должен строить.</div>
+    </div>
+    <div class="draft-cta"><strong>Описание:</strong> Чем больше стараешься — тем дальше она. Вот механика, которую никто не объясняет.</div>
+    <div class="draft-ht">#отношения #мужчина #природаженщины</div>
+  </div>
+
+  <!-- Draft 2 -->
+  <div class="draft">
+    <div class="draft-hd">
+      <div><div class="draft-pl">Telegram · MOFU · Путь через тьму · Личная история</div><div class="draft-tt">«Я был на дне. 12 лет брака, разрушенного в ноль»</div></div>
+      <div class="draft-tags"><span class="badge bm">MOFU</span><span class="badge" style="background:rgba(255,255,255,.05);color:var(--tx3)">Эссе</span></div>
+    </div>
+    <div class="draft-body">
+      <p>Я был на дне. 12 лет брака, разрушенного в ноль.</p>
+      <p>Можно строить семью, любить искренне, стараться — и остаться абсолютно чужим. Смотреть на человека, с которым спишь, и не чувствовать ничего, кроме пустоты.</p>
+      <p>Всё, чему меня учили — разговоры, уступки, «работа над отношениями» — не спасло. Я потерял себя. Потерял желание жить.</p>
+      <p>Потом были депрессия, суицидальные мысли, полная потеря опоры. Я знаю вкус этого отчаяния. Не из книг.</p>
+      <p>И из этого дна я вышел через тело. Тело, которое я игнорировал. Тело, в котором и осталась вся та правда, которую ум слишком хорошо прятал.</p>
+      <p>Тьма не была тупиком. Она оказалась дверью.</p>
+      <p>Сейчас я смотрю на пары на грани развода и узнаю их. Потому что сам там был.</p>
+      <p>Если вы сейчас в этом — ваше тело уже знает ответ. Осталось просто услышать.</p>
+    </div>
+    <div class="draft-cta"><strong>CTA:</strong> Если это про вас — напишите мне.</div>
+  </div>
+
+  <!-- Draft 3 -->
+  <div class="draft">
+    <div class="draft-hd">
+      <div><div class="draft-pl">Telegram · BOFU · Служение · Приглашение</div><div class="draft-tt">«Работаю с парами и мужчинами один-на-один»</div></div>
+      <div class="draft-tags"><span class="badge bb">BOFU</span><span class="badge" style="background:rgba(255,255,255,.05);color:var(--tx3)">Приглашение</span></div>
+    </div>
+    <div class="draft-body">
+      <p>Я работаю с парами и мужчинами один-на-один.</p>
+      <p>Не чтобы уговорить, объяснить или «починить». Я прохожу этот путь рядом — потому что сам его прошёл.</p>
+      <p>Возвращаем близость через тело и полярность. Не разговоры о чувствах — а живую связь, которую вы потеряли.</p>
+      <p>Если чувствуете, что это про вас — напишите мне.</p>
+      <p style="color:var(--tx3)">Я не продаю решение. Я просто здесь.</p>
+    </div>
+    <div class="draft-cta"><strong>CTA:</strong> Написать Антону — личные сообщения.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-l">Контент Завод · Личный бренд Антона · 2026-06-13<br>Стратег · Брендбук · Маркетолог · Продюсер · Контент-Директор (DeepSeek V4 Pro) · Дизайнер</div>
+  <div class="footer-r">Готово к запуску</div>
+</div>
+
+</body>
+</html>
