@@ -103,6 +103,19 @@ producer_output:
 
 ---
 
+## Критерии готовности
+
+Оркестратор проверяет перед запуском следующего агента:
+- [ ] Файл `runtime/*-producer-strategy.md` создан
+- [ ] `brand_strategy_check.status` = `ok` (если `conflicts_found` — пайплайн **стоп**, ждать решения оркестратора)
+- [ ] `funnel_map` заполнен по всем 5 этапам: cold_traffic → lead_magnet → warm_up → sale → retention
+- [ ] `kpi_dashboard` содержит числовые цели (не нули)
+- [ ] `anti_crisis_triggers` — минимум 2 триггера с конкретными действиями
+- [ ] `directive_to_content_director` — не пустой
+- [ ] Агент вернул строку `Готово → runtime/<slug>-producer-strategy.md`
+
+---
+
 ## Ограничения
 
 - Только стратегия — контент-план и распределение задач делает Контент-Директор
