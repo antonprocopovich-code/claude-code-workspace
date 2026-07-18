@@ -6,3 +6,4 @@ claude-code-backup.zip
 # Секреты — не коммитить
 projects/content-zavod/token.json
 projects/content-zavod/credentials.json
+.mcp.json
