@@ -1,6 +1,9 @@
 {
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "figma"
   ],
-  "enableAllProjectMcpServers": true
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  }
 }
